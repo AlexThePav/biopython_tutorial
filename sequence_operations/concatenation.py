@@ -19,7 +19,10 @@ print(nuc_seq + dna_seq)
 
 # List of DNAs
 list_of_seqs = [Seq("ACGT", generic_dna), Seq("AACC", generic_dna), Seq("GGTT", generic_dna)]
+# either
 concatenated = Seq("", generic_dna)
 for s in list_of_seqs:
   concatenated += s
 print(concatenated)
+# or
+print(sum(list_of_seqs, Seq("", generic_dna)))
